@@ -1,14 +1,12 @@
+import FeedbackForm from "./Pages/FeedbackForm"
 
 
 function App() {
 
   return (
-    <>
-      
-      <div className='border-2 border-amber-300'>Hello World</div>
-      
-      
-    </>
+    <div className="min-h-screen bg-gray-100 p-4">
+      <FeedbackForm/>
+    </div>
   )
 }
 
