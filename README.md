@@ -1,4 +1,4 @@
-# 📝 MERN User Feedback System
+# 📝 User Feedback System
 
 A full-stack feedback collection and management system built with **MongoDB**, **Express.js**, **React**, and **Node.js** — styled using **Tailwind CSS**. This project enables users to submit feedback easily, while allowing admins to efficiently manage, categorize, analyze, and track it via a secure dashboard with visual charts.
 
