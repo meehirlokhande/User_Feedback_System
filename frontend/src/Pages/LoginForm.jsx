@@ -33,15 +33,15 @@ const LoginForm = () => {
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md mx-auto">
-                {/* Header Section */}
+                
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Portal</h1>
+                    <h1 className="text-3xl font-bold font-quicksand text-gray-900 mb-2">Admin Portal</h1>
                     <p className="text-lg text-gray-600">
                         Sign in to access the feedback management dashboard
                     </p>
                 </div>
 
-                {/* Login Form Container */}
+             
                 <div className="bg-white shadow-lg rounded-lg p-8 border border-gray-200">
                     <div className="flex items-center justify-center mb-6">
                         <div className="flex items-center space-x-2">
@@ -54,7 +54,7 @@ const LoginForm = () => {
                         </div>
                     </div>
 
-                    {/* Error Message */}
+                   
                     {error && (
                         <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
                             <div className="flex">
@@ -71,7 +71,7 @@ const LoginForm = () => {
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-6">
-                        {/* Username Field */}
+                        
                         <div>
                             <label
                                 htmlFor="username"
@@ -91,7 +91,7 @@ const LoginForm = () => {
                             />
                         </div>
 
-                        {/* Password Field */}
+                        
                         <div>
                             <label
                                 htmlFor="password"
@@ -111,7 +111,7 @@ const LoginForm = () => {
                             />
                         </div>
 
-                        {/* Submit Button */}
+                        
                         <div className="pt-4">
                             <button
                                 type="submit"
@@ -136,7 +136,7 @@ const LoginForm = () => {
                         </div>
                     </form>
 
-                    {/* Footer */}
+                   
                     <div className="mt-8 pt-6 border-t border-gray-200">
         
                         <p className="text-center text-xs text-gray-400 mt-2">
@@ -144,7 +144,7 @@ const LoginForm = () => {
                         </p>
                     </div>
 
-                    {/* Back to Feedback Link */}
+                    
                     <div className="mt-4 text-center">
                         <button
                             onClick={() => navigate('/')}

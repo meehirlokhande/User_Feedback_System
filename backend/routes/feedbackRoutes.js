@@ -14,7 +14,7 @@ const router = express.Router();
 //Public
 router.post('/',createFeedback);
 
-//Admin Only 
+//Admin Only Api's
 router.get('/',protect,adminOnly,getAllFeedback);
 router.get('/stats', protect, adminOnly, getFeedbackStats);
 router.get('/:id', protect, adminOnly, getFeedbackById);

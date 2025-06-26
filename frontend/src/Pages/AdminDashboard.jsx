@@ -15,7 +15,7 @@ const AdminDashboard = () => {
     const [loading, setLoading] = useState(false);
     const [stats, setStats] = useState({});
 
-    // Fetch all feedback
+   
     const fetchFeedback = async () => {
         try {
             const res = await api.get("/feedback", {
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
         }
     };
 
-    // Calculate statistics from feedback data
+    
     const calculateStats = (data) => {
         const stats = {
             total: data.length,
@@ -47,7 +47,7 @@ const AdminDashboard = () => {
         setStats(stats);
     };
 
-    // View feedback details using Get Feedback By Id API
+   
     const handleViewFeedback = async (id) => {
         try {
             const res = await api.get(`/feedback/${id}`, {
@@ -62,7 +62,7 @@ const AdminDashboard = () => {
         }
     };
 
-    // Update feedback using Update Feedback API
+   
     const handleUpdateFeedback = async (id, updates) => {
         setLoading(true);
         try {
@@ -71,7 +71,7 @@ const AdminDashboard = () => {
                     Authorization: localStorage.getItem("token"),
                 },
             });
-            await fetchFeedback(); // Refresh the list
+            await fetchFeedback(); 
             setEditingFeedback(null);
         } catch (err) {
             console.error("Failed to update feedback");
@@ -80,7 +80,7 @@ const AdminDashboard = () => {
         }
     };
 
-    // Helper functions for styling
+    
     const getStatusColor = (status) => {
         switch (status) {
             case 'pending': return 'bg-yellow-100 text-yellow-800 border-yellow-200';

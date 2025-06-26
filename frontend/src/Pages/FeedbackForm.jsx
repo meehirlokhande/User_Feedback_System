@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../api/api";
+import { useNavigate } from "react-router-dom";
 
 const FeedbackForm = () => {
     const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const FeedbackForm = () => {
         feedback: "",
         category: "general",
     });
+    const navigate = useNavigate();
 
     const [success, setSuccess] = useState(null);
     const [error, setError] = useState(null);
@@ -37,21 +39,21 @@ const FeedbackForm = () => {
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto">
-                {/* Header Section */}
+               
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">We Value Your Feedback</h1>
+                    <h1 className="text-3xl font-quicksand font-bold text-gray-900 mb-2">We Value Your Feedback</h1>
                     <p className="text-lg text-gray-600">
                         Help us improve by sharing your thoughts, suggestions, or concerns.
                     </p>
                 </div>
 
-                {/* Form Container */}
+                
                 <div className="bg-white shadow-lg rounded-lg p-8 border border-gray-200">
                     <h2 className="text-xl font-semibold text-gray-800 mb-6 border-b border-gray-200 pb-3">
                         Submit Your Feedback
                     </h2>
 
-                    {/* Success/Error Messages */}
+                   
                     {success && (
                         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
                             <p className="text-green-700 font-medium">{success}</p>
@@ -64,7 +66,7 @@ const FeedbackForm = () => {
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-6">
-                        {/* Name Field */}
+                       
                         <div>
                             <label
                                 htmlFor="name"
@@ -84,7 +86,7 @@ const FeedbackForm = () => {
                             />
                         </div>
 
-                        {/* Email Field */}
+                     
                         <div>
                             <label
                                 htmlFor="email"
@@ -104,13 +106,13 @@ const FeedbackForm = () => {
                             />
                         </div>
 
-                        {/* Category Field */}
+                        
                         <div>
                             <label
                                 htmlFor="category"
                                 className="block text-sm font-medium text-gray-700 mb-2"
                             >
-                                Feedback Category
+                             
                             </label>
                             <select
                                 id="category"
@@ -126,7 +128,7 @@ const FeedbackForm = () => {
                             </select>
                         </div>
 
-                        {/* Feedback Field */}
+                        
                         <div>
                             <label
                                 htmlFor="feedback"
@@ -149,7 +151,7 @@ const FeedbackForm = () => {
                             </p>
                         </div>
 
-                        {/* Submit Button */}
+                    
                         <div className="pt-4">
                             <button
                                 type="submit"
@@ -160,12 +162,20 @@ const FeedbackForm = () => {
                         </div>
                     </form>
 
-                    {/* Footer */}
-                    <div className="mt-8 pt-6 border-t border-gray-200">
-                        
+                
+                    <div className="mt-8 pt-6 border-t border-gray-200"> 
                         <p className="text-center text-xs text-gray-400 mt-2">
                             Thank you for taking the time to share your feedback with us.
                         </p>
+                    </div>
+
+                    <div className="mt-4 text-center">
+                        <button
+                            onClick={() => navigate('/login')}
+                            className="text-indigo-600 hover:text-indigo-500  text-sm font-medium transition-colors duration-200"
+                        >
+                            Go to login →
+                        </button>
                     </div>
                 </div>
             </div>
