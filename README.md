@@ -100,8 +100,8 @@ user_feedback_app/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/mern-feedback-app.git
-cd mern-feedback-app
+git clone https://github.com/meehirlokhande/User_Feedback_System.git
+cd User_Feedback_System
 ```
 
 ### 2. Start the Backend Server
